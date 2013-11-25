@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/12/10 13:23:46.888.pas,C:\Users\Edwin\Documents\RAD Studio\Projects\Unit1.pas=D:\Prj\A2\Reporteador\Cod\uDisenador.pas</Transaction>
+    <Transaction>2011/12/10 13:23:46.901.dfm,C:\Users\Edwin\Documents\RAD Studio\Projects\Unit1.dfm=D:\Prj\A2\Reporteador\Cod\uDisenador.dfm</Transaction>
+    <Transaction>2011/12/10 13:24:03.938.dproj,C:\Users\Edwin\Documents\RAD Studio\Projects\Project1.dproj=D:\Prj\A2\Reporteador\Cod\DisenadorSPA.dproj</Transaction>
+    <Transaction>2011/12/10 13:37:47.386.pas,D:\Prj\A2\Reporteador\Cod\Unit1.pas=D:\Prj\A2\Reporteador\Cod\dmDatos.pas</Transaction>
+    <Transaction>2011/12/10 13:37:47.386.dfm,D:\Prj\A2\Reporteador\Cod\Unit1.dfm=D:\Prj\A2\Reporteador\Cod\dmDatos.dfm</Transaction>
+    <Transaction>2011/12/10 13:53:47.843.pas,D:\Prj\A2\Reporteador\Cod\dmDatos.pas=D:\Prj\A2\Reporteador\Cod\udmDatos.pas</Transaction>
+    <Transaction>2011/12/10 13:53:47.843.dfm,D:\Prj\A2\Reporteador\Cod\dmDatos.dfm=D:\Prj\A2\Reporteador\Cod\udmDatos.dfm</Transaction>
+    <Transaction>2011/12/10 13:53:53.694.pas,D:\Prj\A2\Reporteador\Cod\udmDatos.pas=D:\Prj\A2\Reporteador\Cod\uDatos.pas</Transaction>
+    <Transaction>2011/12/10 13:53:53.694.dfm,D:\Prj\A2\Reporteador\Cod\udmDatos.dfm=D:\Prj\A2\Reporteador\Cod\uDatos.dfm</Transaction>
+    <Transaction>2011/12/12 15:05:42.643.pas,D:\Prj\A2\Reporteador\Cod\Unit1.pas=D:\Prj\A2\Reporteador\Cod\uCompanias.pas</Transaction>
+    <Transaction>2011/12/12 15:05:42.690.dfm,D:\Prj\A2\Reporteador\Cod\Unit1.dfm=D:\Prj\A2\Reporteador\Cod\uCompanias.dfm</Transaction>
+    <Transaction>2011/12/13 18:51:13.077.pas,D:\Prj\A2\Reporteador\Cod\OKCANCL2.pas=D:\Prj\A2\Reporteador\Cod\uReportes.pas</Transaction>
+    <Transaction>2011/12/13 18:51:13.077.dfm,D:\Prj\A2\Reporteador\Cod\OKCANCL2.dfm=D:\Prj\A2\Reporteador\Cod\uReportes.dfm</Transaction>
+    <Transaction>2012/04/13 08:58:07.111.pas,D:\Prj\A2\Reporteador\Cod\uReportes.pas=D:\Prj\A2\Reporteador\Cod\uImportarReportes.pas</Transaction>
+    <Transaction>2012/04/13 08:58:07.111.dfm,D:\Prj\A2\Reporteador\Cod\uReportes.dfm=D:\Prj\A2\Reporteador\Cod\uImportarReportes.dfm</Transaction>
+    <Transaction>2013/11/07 16:56:17.984.pas,C:\Prj\Reporteador\Cod\Unit1.pas=C:\Prj\CompartidosA2\uTablasConBlobNomina.pas</Transaction>
+    <Transaction>2013/11/07 16:56:17.984.dfm,C:\Prj\Reporteador\Cod\Unit1.dfm=C:\Prj\CompartidosA2\uTablasConBlobNomina.dfm</Transaction>
+    <Transaction>2013/11/07 17:16:42.342.pas,C:\Prj\Reporteador\Cod\Unit1.pas=C:\Prj\CompartidosA2\uTablasConBlobContabilidad.pas</Transaction>
+    <Transaction>2013/11/07 17:16:42.342.dfm,C:\Prj\Reporteador\Cod\Unit1.dfm=C:\Prj\CompartidosA2\uTablasConBlobContabilidad.dfm</Transaction>
+    <Transaction>2013/11/07 17:35:00.149.pas,C:\Prj\CompartidosA2\uTablasConBlobContabilidad.pas=</Transaction>
+    <Transaction>2013/11/07 17:35:00.149.dfm,C:\Prj\CompartidosA2\uTablasConBlobContabilidad.dfm=</Transaction>
+  </Transactions>
+</BorlandProject>
