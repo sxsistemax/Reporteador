@@ -104,13 +104,15 @@ object dmDatos: TdmDatos
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Por defecto'
     PrintOptions.PrintOnSheet = 0
+    PrintOptions.PrintPages = ppEven
     ReportOptions.CreateDate = 40890.844064131950000000
-    ReportOptions.LastChange = 40890.844064131950000000
+    ReportOptions.LastChange = 41684.645775243060000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
+    OnPrintPage = ReportePrintPage
     Left = 56
     Top = 168
     Datasets = <>
@@ -121,9 +123,9 @@ object dmDatos: TdmDatos
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 210.000000000000000000
-      PaperHeight = 297.000000000000000000
-      PaperSize = 9
+      PaperWidth = 215.900000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 1
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
@@ -304,5 +306,9 @@ object dmDatos: TdmDatos
   object frxDBI4Components1: TfrxDBI4Components
     Left = 368
     Top = 456
+  end
+  object fxComponentes: TfrxDBI4Components
+    Left = 368
+    Top = 144
   end
 end

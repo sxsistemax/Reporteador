@@ -41,8 +41,10 @@ type
     frxChartObject1: TfrxChartObject;
     pProgreso: TJvProgressDialog;
     frxDBI4Components1: TfrxDBI4Components;
+    fxComponentes: TfrxDBI4Components;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
+    procedure ReportePrintPage(Page: TfrxReportPage; CopyNo: Integer);
   private
     { Private declarations }
   public
@@ -65,7 +67,7 @@ var
 implementation
 
 uses uBaseDatosA2, uTablasConBlobAdministrativo, uTablasConBlobNomina,
-  uTablasConBlobContabilidad;
+  uTablasConBlobContabilidad, uUtilidadesSPA;
 
 {$R *.dfm}
 
@@ -142,6 +144,8 @@ var
       T.DatabaseName := db.DatabaseName;
       T.Name := Nombre;
       T.TableName := NombreTabla;
+
+      fxComponentes.DefaultDatabase := db;
 
       // Crea el dataset para el reporte
       AdicionarDataSetAReporte( T);
@@ -296,6 +300,12 @@ begin
   dbReportes.Close;
 
   BorrarTablas;
+end;
+
+procedure TdmDatos.ReportePrintPage(Page: TfrxReportPage; CopyNo: Integer);
+begin
+  if ModoDemo then
+    Page.Clear;
 end;
 
 procedure TdmDatos.ReportesCompania(AIdCompania: integer);

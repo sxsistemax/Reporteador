@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, pngimage, ExtCtrls, uDatos, DBCtrls, ComCtrls,
   JvExComCtrls, JvDBTreeView, DB, Buttons, uCompanias, Grids, DBGrids, ImgList,
-  ActnList, Menus, uUtilidades, uReportes, JvListView;
+  ActnList, Menus, uUtilidades, uReportes, JvListView, OnGuard;
 
 type
   TfrmDisenador = class(TForm)
@@ -39,6 +39,8 @@ type
     ImportarRep: TAction;
     DisenarRep: TAction;
     Importar1: TMenuItem;
+    bRegistro: TBitBtn;
+    BitBtn1: TBitBtn;
     procedure MenuReportesPopup(Sender: TObject);
     procedure NuevaCiaExecute(Sender: TObject);
     procedure EditarCiaExecute(Sender: TObject);
@@ -50,6 +52,9 @@ type
     procedure dbListCompaniasClick(Sender: TObject);
     procedure dbListReportesDblClick(Sender: TObject);
     procedure MenuCompaniasPopup(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure bRegistroClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +65,7 @@ type
     Procedure Habilitar(AIdCompania, AIdReporte : integer);
     procedure MostrarReporte( AIdReporte : integer);
     procedure RefrescarReportes;
+    procedure CargarDatosAplicaion;
   end;
 
 var
@@ -68,6 +74,18 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uUtilidadesSPA, uSeguridad;
+
+Const
+  IdentificadorAplicacion : TKey = ($73,$8F,$16,$A1,$6F,$B4,$CB,$B4,$70,$89,$2D,$48,$9A,$C1,$4F,$9A);
+
+
+procedure TfrmDisenador.BitBtn1Click(Sender: TObject);
+begin
+  if Confirmar('¿ Esta seguro de salir de la apliación ?') then
+    Close;
+end;
 
 procedure TfrmDisenador.BorrarCiaExecute(Sender: TObject);
 begin
@@ -106,6 +124,16 @@ begin
   end;
 end;
 
+procedure TfrmDisenador.bRegistroClick(Sender: TObject);
+begin
+  MostrarRegistrado;
+end;
+
+procedure TfrmDisenador.CargarDatosAplicaion;
+begin
+  Key := IdentificadorAplicacion;
+end;
+
 procedure TfrmDisenador.dbListCompaniasClick(Sender: TObject);
 begin
   RefrescarReportes;
@@ -124,6 +152,13 @@ end;
 
 procedure TfrmDisenador.DuplicarReporteExecute(Sender: TObject);
 begin
+  if ModoDemo and
+    ((dbListReportes.ListSource.DataSet.RecordCount > 0)) then
+  begin
+    ShowMessage('En modo demo solo puede crear una compañía y un reporte.');
+    exit;
+  end;
+
   if dmDatos.qrReportesIdReporte.Value <> 0  then
   begin
     Reportes(dmDatos.qrReportesIdCompania.Value, dmDatos.qrReportesIdReporte.Value);
@@ -138,6 +173,16 @@ begin
     if Companias( dmDatos.tbCompaniasIdCompania.Value) then
       ;
   end;
+end;
+
+procedure TfrmDisenador.FormCreate(Sender: TObject);
+begin
+  CargarDatosAplicaion;
+
+  ModoDemo := True;
+
+  ValidarRegistro( ModoDemo) ;
+
 end;
 
 procedure TfrmDisenador.Habilitar(AIdCompania, AIdReporte : integer);
@@ -161,6 +206,7 @@ begin
       BorrarRep.Enabled := True;
     end;
 end;
+
 
 procedure TfrmDisenador.MenuCompaniasPopup(Sender: TObject);
 begin
@@ -198,6 +244,13 @@ end;
 
 procedure TfrmDisenador.NuevaCiaExecute(Sender: TObject);
 begin
+  if ModoDemo and
+    ( (dbListCompanias.ListSource.DataSet.RecordCount > 0) ) then
+  begin
+    ShowMessage('En modo demo solo puede crear una compañía y un reporte.');
+    exit;
+  end;
+
   if Companias( 0) then ;
 end;
 
@@ -220,6 +273,13 @@ end;
 
 procedure TfrmDisenador.NuevoRepExecute(Sender: TObject);
 begin
+  if ModoDemo and
+    ((dbListReportes.ListSource.DataSet.RecordCount > 0)) then
+  begin
+    ShowMessage('En modo demo solo puede crear una compañía y un reporte.');
+    exit;
+  end;
+
   if dbListCompanias.KeyValue > 0  then
   begin
     if Reportes(dmDatos.tbCompaniasIdCompania.Value, 0) then

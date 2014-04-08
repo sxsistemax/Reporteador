@@ -104,7 +104,7 @@
 						<VersionInfo Name="MajorVer">1</VersionInfo>
 						<VersionInfo Name="MinorVer">1</VersionInfo>
 						<VersionInfo Name="Release">0</VersionInfo>
-						<VersionInfo Name="Build">13</VersionInfo>
+						<VersionInfo Name="Build">15</VersionInfo>
 						<VersionInfo Name="Debug">False</VersionInfo>
 						<VersionInfo Name="PreRelease">True</VersionInfo>
 						<VersionInfo Name="Special">False</VersionInfo>
@@ -116,7 +116,7 @@
 					<VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName">SX SistemaX</VersionInfoKeys>
 						<VersionInfoKeys Name="FileDescription">Diseñador de Reportes Sarfaty Pacheco y Asociados</VersionInfoKeys>
-						<VersionInfoKeys Name="FileVersion">1.1.0.13</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.1.0.15</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName">DiseñadorSPA</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalCopyright"/>
 						<VersionInfoKeys Name="LegalTrademarks"/>
